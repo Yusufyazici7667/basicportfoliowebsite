@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lazy Entertainment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <div id="cookie-consent">
+        <p>Bu site çerezleri kullanır. Çerezlerle ilgili daha fazla bilgi için <a href="#">çerez politikamıza</a> bakabilirsiniz.</p>
+        <button id="cookie-allow">Çerezlere İzin Ver</button>
+        <button id="cookie-decline">Çerezlere İzin Verme</button>
+      </div>
+      
+      <h1>Lazy Entertainment</h1>
+      <p>Founded by Yusuf Yazici</p>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about">
+        <div class="about-content">
+          <h2>Hakkında</h2>
+          <p>Lazy Entertainment, Yusuf Yazıcı tarafından kurulan bir oyun geliştirme şirketidir. Şirket, kaliteli ve eğlenceli oyunlar sunmak amacıyla kurulmuştur.</p>
+        </div>
+        <div class="about-image">
+          <img src="LazyEntertaınmentlogo.png" alt="Lazy Entertainment">
+        </div>
+      </section>      
+      <section id="games">
+        <h2>Oyunlar</h2>
+        <div class="games-container"> 
+          <div class="game">
+            <img src="b-312.png" alt="B-312">
+            <h3>B-312</h3>
+            <p>Our character, who is tired of life and doesn't leave his home much, comes across a news while watching television. Presenter said in the news that volunteers are needed for the experiment to be carried out. Our character thinks he has nothing to lose and goes to the facility where the experiment will take place. The attendant is told that his number is B-312. When he enters the experimental room, he sees the other subjects getting worse and worse. It says "I only live once." and he starts running. But when he ran away, he didn't know he was actually in the real experiment.</p>
+          </div>
+          <div class="game">
+            <img src="game-2-image.jpg" alt="Game 2">
+            <h3>Game 2</h3>
+            <p>Game 2 açıklaması</p>
+          </div>
+          <div class="game">
+            <img src="game-3-image.jpg" alt="Game 3">
+            <h3>Game 3</h3>
+            <p>Game 3 açıklaması</p>
+          </div>
+        </div>
+      </section>      
+      <section id="contact">
+        <h2>İletişim</h2>
+        <form action="#">
+          <input type="text" placeholder="Adınız">
+          <input type="email" placeholder="Email Adresiniz">
+          <textarea placeholder="Mesajınız"></textarea>
+          <button type="submit">Gönder</button>
+        </form>
+        <div class="contact-info">
+          <h3>Lazy Entertainment</h3>
+          <p>Yusuf Yazıcı, Kurucu</p>
+          <p>+90 123 45 67</p>
+          <p>info@lazyentertainment.com</p>
+        </div>
+      </section>      
+    </main>
+    <footer>
+      <div class="social-media">
+        <a href="https://instagram.com/lazyentertainment"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://twitter.com/lazyentertainment"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://linkedin.com/company/lazyentertainment"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>&copy; Lazy Entertainment 2023</p>
+    </footer>
+  </body>
+
+  <script>
+  const cookieAllow = document.getElementById("cookie-allow");
+const cookieDecline = document.getElementById("cookie-decline");
+const cookieConsent = document.getElementById("cookie-consent");
+
+cookieAllow.addEventListener("click", function() {
+  localStorage.setItem("cookieConsent", "allowed");
+  cookieConsent.style.display = "none";
+});
+
+cookieDecline.addEventListener("click", function() {
+  localStorage.setItem("cookieConsent", "declined");
+  cookieConsent.style.display = "none";
+});
+
+if (localStorage.getItem("cookieConsent") === "allowed") {
+  cookieConsent.style.display = "none";
+}
+
+  </script>
+</html>
